@@ -8,7 +8,15 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3 
+      uses: actions/checkout@v3
 
     - name: Build
       run: make
+
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifacts
+        path: |
+          main          # Specify the output binary
+          main.o        # Optionally include the object file if needed

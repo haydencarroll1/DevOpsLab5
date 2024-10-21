@@ -1,2 +1,1 @@
-echo "main" >> .gitignore
-echo "main.o" >> .gitignore
+*.o   
